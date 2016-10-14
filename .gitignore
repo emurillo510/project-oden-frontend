@@ -18,3 +18,7 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+
+# misc
+.ember-cli
+/.vscode
