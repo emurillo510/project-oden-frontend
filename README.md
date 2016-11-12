@@ -64,4 +64,7 @@ Specify what it takes to deploy your app.
 [] install twitter integration
 [] install d3.js
 
+[] writes acceptance test cases before writing code
+
+
 
