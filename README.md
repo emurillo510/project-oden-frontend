@@ -1,4 +1,4 @@
-# Ember-project-oden
+# Ember-project-oden.
 
 This is a repository for 'www.moneylyne.com' website a bet tracking website where people can place bets and keep track of the history of how they are betting over time.
 

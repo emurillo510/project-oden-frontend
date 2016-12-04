@@ -7,7 +7,11 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Sign-Up</a>
+        {{#if session.isAuthenticated}}
+          <a class="mdl-navigation__link" {{action "toggleModal"}} >Logout</a>
+        {{else}}
+          <a class="mdl-navigation__link" {{action "toggleModal"}} >Sign-Up</a>
+        {{/if}}
       </nav>
     </div>
   </header>
@@ -25,3 +29,23 @@
   </main>
 </div>
 
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="sample1" placeholder="Email">
+  </div>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="password" id="sample2" placeholder="Password">
+  </div>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="password" id="sample3" placeholder="Confirm Password">
+  </div>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Submit
+  </button>
+</form>
+  {{/modal-dialog}}
+{{/if}}
